@@ -1,6 +1,10 @@
+import React from 'react'
+
 const About = () => {
   return (
-    <div>About</div>
+    <div className="card card-body">
+      <h2>About</h2>
+    </div>
   )
 }
 

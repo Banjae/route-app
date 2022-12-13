@@ -1,6 +1,10 @@
+import React from 'react'
+
 const Songlist = () => {
   return (
-    <div>Songlist</div>
+    <div className="card card-body">
+      <h2>Songlist</h2>
+    </div>
   )
 }
 
