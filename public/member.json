@@ -1,0 +1,34 @@
+[
+  { 
+    "name": "Yerin Baek", 
+    "photo": "photos/Yerin.jpg" 
+  },
+  { 
+    "name": "meenoi", 
+    "photo": "photos/meenoi.jpg" 
+  },
+  { 
+    "name": "Jinah Kwon", 
+    "photo": "photos/Jinah.jpg" 
+  },
+  { 
+    "name": "IU", 
+    "photo": "photos/IU.jpg" 
+  },
+  { 
+    "name": "YounHa", 
+    "photo": "photos/Younha.jpg" 
+  },
+  { 
+    "name": "Ayeon Baek", 
+    "photo": "photos/Ayeon.jpg" 
+  },
+  { 
+    "name": "Suran", 
+    "photo": "photos/Suran.jpg" 
+  },
+  { 
+    "name": "KyoungSeo", 
+    "photo": "photos/Kyoungseo.jpg" 
+  }
+]

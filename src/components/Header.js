@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="card bg-light">
       <div className="card-heding">
-        <h2 className="text-center m-3">Indie Band</h2>
+        <h2 className="text-center m-3">My Playlist</h2>
         <div className="row">
           <div className="col-12">
             <Link className="btn btn-success menu" to="/">Home</Link>
