@@ -1,6 +1,23 @@
 import React from 'react'
+import { useNavigate } from 'react-router';
 
 const Members = (props) => {
+  // useNavigate Hook 은 navigate() 를 리턴
+  // navigate(to, option)이 있음
+  //   to   : 이동할 경로
+  // option : {replace : true/false, state : {} }
+
+  //           replace 란 history 관리
+  //           state 란 네비게이션할 떄 전달할 정보
+  //                 이동한 후에 location.state 로 사용가능
+
+  const navigate = useNavigate();
+  const goHome = () => {
+    if(window.confirm("Back to Home?")) {
+      navigate("/", { state: { from: "/member"} } );
+    }
+  }
+
   const imgSize = { width: 90, height: 80 };
   const list = props.members.map( (item, index) => {
     return (
@@ -20,6 +37,7 @@ const Members = (props) => {
       <div className="container">
         <div className="row">{list}</div>
       </div>
+      <button className='btn btn-primary' onClick={goHome}>Go Home</button>
     </div>
   )
 }
