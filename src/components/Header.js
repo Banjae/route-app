@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -8,10 +8,27 @@ const Header = () => {
         <h2 className="text-center m-3">My Playlist</h2>
         <div className="row">
           <div className="col-12">
-            <Link className="btn btn-success menu" to="/">Home</Link>
-            <Link className="btn btn-success menu" to="/about">About</Link>
-            <Link className="btn btn-success menu" to="/members">Members</Link>
-            <Link className="btn btn-success menu" to="/songs">Songlist</Link>
+            {/* NavLink : Link가 현재 경로와 일치하면 css 설정 */}
+            <NavLink className={({isActive}) => {
+              return isActive ? "btn menu btn-dark" : "btn menu btn-success"
+            }} to="/home"> 
+              Home
+            </NavLink>
+            <NavLink className={({isActive}) => {
+              return isActive ? "btn menu btn-dark" : "btn menu btn-success"
+            }} to="/about">
+              About
+            </NavLink>
+            <NavLink className={({isActive}) => {
+              return isActive ? "btn menu btn-dark" : "btn menu btn-success"
+            }} to="/members">
+              Members
+            </NavLink>
+            <NavLink className={({isActive}) => {
+              return isActive ? "btn menu btn-dark" : "btn menu btn-success"
+            }} to="/songs">
+              Songlist
+            </NavLink>
           </div>
         </div>
       </div>
