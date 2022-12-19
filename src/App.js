@@ -7,9 +7,11 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Members from './pages/Members'
 import Songlist from './pages/Songlist'
-import { BrowserRouter as Router, Routes, Route, Await } from "react-router-dom";
+import NotFound from './pages/NotFound'
 import Player from './pages/Player'
 import PlayerIndex from './pages/PlayerIndex'
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+
 
 const App = () => {
 
@@ -43,13 +45,15 @@ const App = () => {
       <div className="container">
         <Header />
         <Routes>
-          <Route path = "/" element={<Home />} />
+          <Route path = "/" element={<Navigate to="/home" />} />
+          <Route path = "/home" element={<Home />} />
           <Route path = "/about" element={<About title="Singer" />} />
           <Route path = "/members" element={<Members members={members} />} />
           <Route path = "/songs" element={<Songlist songs={songs} />} >
             <Route index element={<PlayerIndex />} />
             <Route path=":id" element={<Player songs={songs} />} />
           </Route>
+          <Route path = "*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
